@@ -1,0 +1,1055 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/en/img/favicon.png">
+  <link rel="icon" href="/en/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Jinhui-Li">
+  <meta name="keywords" content="">
+  <meta name="description" content="About DiverSee  DiverSee focuses on the visualization of microbial diversity.  It is divided into two parts, α diversity and β diversity.  In α diversity, we introduce the pirate diagram into it, whic">
+<meta property="og:type" content="article">
+<meta property="og:title" content="4. How to use DiverSee？">
+<meta property="og:url" content="https://microbiosee.github.io/en/undefined/4-How-to-use-DiverSee%EF%BC%9F/index.html">
+<meta property="og:site_name" content="MicobioSee">
+<meta property="og:description" content="About DiverSee  DiverSee focuses on the visualization of microbial diversity.  It is divided into two parts, α diversity and β diversity.  In α diversity, we introduce the pirate diagram into it, whic">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://microbiosee.github.io/en/images/pasted-14.png">
+<meta property="og:image" content="https://microbiosee.gxu.edu.cn/images/haidao.jpg">
+<meta property="og:image" content="https://microbiosee.gxu.edu.cn/images/pcoa.png">
+<meta property="article:published_time" content="2021-11-03T10:51:57.000Z">
+<meta property="article:modified_time" content="2021-11-05T03:58:51.735Z">
+<meta property="article:author" content="Jinhui-Li">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://microbiosee.github.io/en/images/pasted-14.png">
+  
+  <title>4. How to use DiverSee？ - MicobioSee</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/en/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/en/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"microbiosee.github.io","root":"/en/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"siteId=17333726","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/en/local-search.xml"};
+  </script>
+  <script  src="/en/js/utils.js" ></script>
+  <script  src="/en/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/en/">
+      <strong>MicrobioSee</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/en/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/en/about/index.html">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://microbiosee.gxu.edu.cn/">
+                <i class="iconfont icon-link-fill"></i>
+                Links
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://microbiosee.github.io/">
+                <i class="iconfont icon-language-fill"></i>
+                中/En
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/en/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="4. How to use DiverSee？">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-11-03 18:51" pubdate>
+        November 3, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      9 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">4. How to use DiverSee？</h1>
+            
+            <div class="markdown-body">
+              <h1 id="About-DiverSee"><a href="#About-DiverSee" class="headerlink" title="About DiverSee"></a>About DiverSee</h1><p><img src="/en/images/pasted-14.png" srcset="/en/img/loading.gif" lazyload alt="upload successful"></p>
+<ul>
+<li><p>DiverSee focuses on the visualization of microbial diversity.</p>
+</li>
+<li><p>It is divided into two parts, α diversity and β diversity.</p>
+</li>
+<li><p>In α diversity, we introduce the pirate diagram into it, which has more elements than the commonly used violin diagram, and can present our data more comprehensively.</p>
+</li>
+<li><p>As we know, the violin plot consists of a combination of box-line and kernel density plots, which are usually used to describe the data distribution and probability density; the pirate plot consists of box-line, kernel density and scatter plots.</p>
+</li>
+<li><p>In the pirate plot, we see the real distribution of the data. There are studies using the ggplot2 package in R to superimpose a scatter plot on top of the violin plot, which as far as I know requires the user to be proficient in programming skills or six months to learn the programming language if there is no programming language learning experience</p>
+</li>
+<li><p>MicrobioSee mainly addresses the fact that visualizing the results of integrating microbiome data is a major challenge for wet-lab researchers, as programming skills are a huge barrier for the vast majority of wet-lab researchers.</p>
+</li>
+<li><p>If you have a very deep mastery of programming languages like R, python and graphics, then you can join us and make MicrobioSee more popular in this world.</p>
+</li>
+</ul>
+<h1 id="How-to-use-DiverSee？"><a href="#How-to-use-DiverSee？" class="headerlink" title="How to use DiverSee？"></a>How to use DiverSee？</h1><h2 id="How-to-use-α-diversity-？"><a href="#How-to-use-α-diversity-？" class="headerlink" title="How to use α diversity ？"></a>How to use α diversity ？</h2><ul>
+<li>If you are using it for the first time, you can download the sample data by clicking on “You can download sample data here” in the picture above, and then click on “File input” to select the downloaded sample data to upload.</li>
+<li>For the following parameters, we provide the default settings, you can directly click “Go!</li>
+</ul>
+<p><img src="https://microbiosee.gxu.edu.cn/images/haidao.jpg" srcset="/en/img/loading.gif" lazyload alt="α diversity"></p>
+<h4 id="Upload-File-Format"><a href="#Upload-File-Format" class="headerlink" title="Upload File Format"></a>Upload File Format</h4><ul>
+<li>In the sample data, we see the formatting requirements of this column for the raw data. Alpha diversity usually consists of many clock results, such as richness, etc. You need to adapt the data and grouping information for graphing to a csv file with only two columns.</li>
+</ul>
+<hr>
+<table>
+<thead>
+<tr>
+<th>chao1</th>
+<th>Group</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2354</td>
+<td>KO</td>
+</tr>
+<tr>
+<td>2307.9</td>
+<td>KO</td>
+</tr>
+<tr>
+<td>1947.2</td>
+<td>KO</td>
+</tr>
+<tr>
+<td>2005</td>
+<td>KO</td>
+</tr>
+<tr>
+<td>1812.5</td>
+<td>KO</td>
+</tr>
+<tr>
+<td>2160.8</td>
+<td>KO</td>
+</tr>
+<tr>
+<td>2546.6</td>
+<td>OE</td>
+</tr>
+<tr>
+<td>2497.6</td>
+<td>OE</td>
+</tr>
+<tr>
+<td>2389.7</td>
+<td>OE</td>
+</tr>
+<tr>
+<td>2399.8</td>
+<td>OE</td>
+</tr>
+<tr>
+<td>2434.7</td>
+<td>OE</td>
+</tr>
+<tr>
+<td>2542.6</td>
+<td>OE</td>
+</tr>
+<tr>
+<td>2303.9</td>
+<td>WT</td>
+</tr>
+<tr>
+<td>2101.9</td>
+<td>WT</td>
+</tr>
+</tbody></table>
+<hr>
+<h4 id="Parameters-List"><a href="#Parameters-List" class="headerlink" title="Parameters List"></a>Parameters List</h4><p><strong>File</strong>: input file.<br><strong>Title</strong>: this is the graph title.<br><strong>Palette</strong>: color palette selector.  <br><strong>Theme</strong>: we previde four type of theme.<br><strong>Speculative interval</strong>: statistical methods, definition of box plot. bayesian maximum density interval(hdi) or frequency confidence interval(ci).</p>
+<h2 id="How-to-use-β-diversity-？"><a href="#How-to-use-β-diversity-？" class="headerlink" title="How to use β diversity ？"></a>How to use β diversity ？</h2><ul>
+<li>If you are a first-time user, you can download the sample data by clicking on “You can download sample data here” in the figure above, and then click on “File input” to select the downloaded sample data. </li>
+<li>For the following parameters, we have provided default settings, you can directly click “Go!<br><img src="https://microbiosee.gxu.edu.cn/images/pcoa.png" srcset="/en/img/loading.gif" lazyload alt="β diversity "><h4 id="Upload-File-Format-1"><a href="#Upload-File-Format-1" class="headerlink" title="Upload File Format"></a>Upload File Format</h4></li>
+</ul>
+<p><strong>file1.csv</strong>    </p>
+<table>
+<thead>
+<tr>
+<th>Achimill</th>
+<th>Agrostol</th>
+<th>Airaprae</th>
+<th>Alopgeni</th>
+<th>Anthodor</th>
+<th>Bellpere</th>
+<th>Bromhord</th>
+<th>Chenalbu</th>
+<th>Cirsarve</th>
+<th>Comapalu</th>
+<th>Eleopalu</th>
+<th>Elymrepe</th>
+<th>Empenigr</th>
+<th>Hyporadi</th>
+<th>Juncarti</th>
+<th>Juncbufo</th>
+<th>Lolipere</th>
+<th>Planlanc</th>
+<th>Poaprat</th>
+<th>Poatriv</th>
+<th>Ranuflam</th>
+<th>Rumeacet</th>
+<th>Sagiproc</th>
+<th>Salirepe</th>
+<th>Scorautu</th>
+<th>Trifprat</th>
+<th>Trifrepe</th>
+<th>Vicilath</th>
+<th>Bracruta</th>
+<th>Callcusp</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>7</td>
+<td>0</td>
+<td>4</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>3</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>5</td>
+<td>0</td>
+<td>4</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>5</td>
+<td>0</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>7</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>6</td>
+<td>0</td>
+<td>5</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0</td>
+<td>8</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>3</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>5</td>
+<td>0</td>
+<td>4</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>5</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>5</td>
+<td>2</td>
+<td>6</td>
+<td>0</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>3</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>6</td>
+<td>5</td>
+<td>3</td>
+<td>4</td>
+<td>0</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>3</td>
+<td>5</td>
+<td>5</td>
+<td>0</td>
+<td>6</td>
+</tr>
+<tr>
+<td>7</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>6</td>
+<td>5</td>
+<td>4</td>
+<td>5</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>3</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>8</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+<td>4</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>9</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>4</td>
+<td>2</td>
+<td>0</td>
+<td>4</td>
+<td>5</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>10</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>2</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>6</td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>6</td>
+<td>1</td>
+<td>2</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>file2.csv</strong></p>
+<table>
+<thead>
+<tr>
+<th>Order</th>
+<th>Management</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>SF</td>
+</tr>
+<tr>
+<td>2</td>
+<td>BF</td>
+</tr>
+<tr>
+<td>3</td>
+<td>SF</td>
+</tr>
+<tr>
+<td>4</td>
+<td>SF</td>
+</tr>
+<tr>
+<td>5</td>
+<td>HF</td>
+</tr>
+<tr>
+<td>6</td>
+<td>HF</td>
+</tr>
+<tr>
+<td>7</td>
+<td>HF</td>
+</tr>
+<tr>
+<td>8</td>
+<td>HF</td>
+</tr>
+<tr>
+<td>9</td>
+<td>HF</td>
+</tr>
+<tr>
+<td>10</td>
+<td>BF</td>
+</tr>
+<tr>
+<td>11</td>
+<td>BF</td>
+</tr>
+<tr>
+<td>12</td>
+<td>SF</td>
+</tr>
+<tr>
+<td>13</td>
+<td>SF</td>
+</tr>
+<tr>
+<td>14</td>
+<td>NM</td>
+</tr>
+<tr>
+<td>15</td>
+<td>NM</td>
+</tr>
+<tr>
+<td>16</td>
+<td>SF</td>
+</tr>
+<tr>
+<td>17</td>
+<td>NM</td>
+</tr>
+<tr>
+<td>18</td>
+<td>NM</td>
+</tr>
+<tr>
+<td>19</td>
+<td>NM</td>
+</tr>
+<tr>
+<td>20</td>
+<td>NM</td>
+</tr>
+</tbody></table>
+<h4 id="Parameters-List-1"><a href="#Parameters-List-1" class="headerlink" title="Parameters List"></a>Parameters List</h4><ul>
+<li>Sample abundance data file input</li>
+<li>Sample grouping data File input</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/en/undefined/5-How-to-use-SpeSee/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">5. How to use SpeSee?</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/en/undefined/How-to-use-RocSee/">
+                        <span class="hidden-mobile">6. How to use RocSee</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'MicrobioSee/MicrobioSee.github.io');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://microbiosee.gxu.edu.cn" target="_blank" rel="nofollow noopener"><span>MicrobioSee</span></a> <i class="iconfont icon-love"></i> <a href="https://www.gxu.edu.cn/" target="_blank" rel="nofollow noopener"><span>GXU</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/en/js/events.js" ></script>
+<script  src="/en/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/en/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/en/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?siteId=17333726";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/en/js/boot.js" ></script>
+
+
+</body>
+</html>
