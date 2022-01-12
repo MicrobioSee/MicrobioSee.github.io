@@ -1,3 +1,7 @@
+microbiosee-users-guide
+microbiosee-a-visualization-tool-for-microbial-multiomics.
+issues-and-contact
+license
 alpha-diversity-mapping-description
 upload-sample-data
 different-alpha-index-values-and-statistical-methods
